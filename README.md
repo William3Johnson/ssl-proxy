@@ -11,7 +11,7 @@ A simple and easy to install SSL proxy. Can use different ports and standalone c
 You can stop the script by using the command ```npm stop```, and you will have to do it if you want to update the SSL certificate or change the port.
 
 # Compatibility
-Tested on Linux Ubuntu 20.04 LTS. Should work nicely on MacOS X, but the script hasn't been tested on Windows. I believe it should work fine on Windows, aside from the ```chmode``` command, that is not available.
+Tested on Linux Ubuntu 20.04 LTS. Should work nicely on MacOS X, but the script hasn't been tested on Windows. I believe it should work fine on Windows, aside from the ```chmode``` command, that is not available on Windows, and you will have to change the file mode some other way around.
 
 # Credit
 This is a free to use, and free to distribute repository by Nova Network, created by Paulo Baronceli. Use at your own risk, and we accept no liability from the usage of this script.
