@@ -4,7 +4,7 @@ var fs = require('fs');
 httpProxy.createServer({
   target: {
     host: 'localhost',
-    port: 8545
+    port: 80
  },
  ssl: {
     key: fs.readFileSync(
@@ -12,4 +12,4 @@ httpProxy.createServer({
     cert: fs.readFileSync(
     '/assets/ssl/default.crt', 'utf8')
  }
-}).listen(80);
+}).listen(443);
