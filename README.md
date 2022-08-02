@@ -10,6 +10,10 @@ A simple and easy to install SSL proxy. Can use different ports and standalone c
 
 You can stop the script by using the command ```npm stop```, and you will have to do it if you want to update the SSL certificate or change the port.
 
+## Use Root & Intermediate Certificates
+
+We have added Root and Intermediate Certificate compatibility, using CA Bundles. Some applications will require this extra level of security to work, and to use it all you need to do is to replace the file `/assets/ssl/default.ca` with your own CA Bundle file, and run `npm start-ca` to start the proxy server.
+
 # Compatibility
 Tested on Linux Ubuntu 20.04 LTS. Should work nicely on MacOS X, but the script hasn't been tested on Windows. I believe it should work fine on Windows, aside from the ```chmode``` command, that is not available on Windows, and you will have to change the file mode some other way around.
 
