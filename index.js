@@ -12,4 +12,8 @@ httpProxy.createServer({
     cert: fs.readFileSync(
     './assets/ssl/default.crt', 'utf8')
  }
-}).listen(443);
+}).listen(
+   443
+).on('error', function(e) {
+  console.log(JSON.stringify(e, null, ' '))
+});
