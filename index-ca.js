@@ -14,4 +14,9 @@ httpProxy.createServer({
     ca: fs.readFileSync(
     '/assets/ssl/default.ca', 'utf8')
  }
-}).listen(443);
+}).listen(
+   443
+).on('error', function(e) {
+  console.log(JSON.stringify(e, null, ' '))
+});
+
