@@ -1,6 +1,7 @@
-// By default requires a Private Key (default.key), a Certificate (default.crt),
-// and a CA Bundle (default.ca). If you are using a self-signed certificate without
-// a CA Bundle, you will have to start the server using 'index-self.js' instead.
+// index-self.js can be used to initiate the proxy with a self-signed SSL certificate,
+// without a CA Bundle to go along with it. We only recommend the usage of self-signed
+// certificates for development purposes, as they are not recognised as valid by
+// most modern internet browsers and applications.
 
 var httpProxy = require('http-proxy');
 var fs = require('fs');
@@ -21,9 +22,7 @@ httpProxy.createServer({
     key: fs.readFileSync(
     '/assets/ssl/default.key', 'utf8'),
     cert: fs.readFileSync(
-    '/assets/ssl/default.crt', 'utf8'),
-    ca: fs.readFileSync(
-    '/assets/ssl/default.ca', 'utf8')
+    '/assets/ssl/default.crt', 'utf8')
  }
 
 // .listen defines the destination port of the proxy. If you are just using this
