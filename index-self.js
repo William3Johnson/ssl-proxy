@@ -20,9 +20,9 @@ httpProxy.createServer({
 
  ssl: {
     key: fs.readFileSync(
-    '/assets/ssl/default.key', 'utf8'),
+    './assets/ssl/default.key', 'utf8'),
     cert: fs.readFileSync(
-    '/assets/ssl/default.crt', 'utf8')
+    './assets/ssl/default.crt', 'utf8')
  }
 
 // .listen defines the destination port of the proxy. If you are just using this
