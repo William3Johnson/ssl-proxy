@@ -4,7 +4,6 @@
   "description": "A easy set-up for SSL certificate through a proxy on a specific port.",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js && echo \"Server Started: exiting\" && exit 1"
     "start": "node index.js &",
     "start-self": "node index-self.js &",
     "stop": "./stop.sh"
